@@ -1,0 +1,450 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-repeat: no-repeat;
+    background: black;
+}
+.main-container{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.logo-header img{
+    display: block;
+    width: clamp(70px, 10vw, 130px);
+    height: auto;
+    margin: -.2rem .3rem 0;
+    /* top: -1.3rem;
+    left: -1rem; */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: .5rem 0;
+    background-color: black;
+}
+#cartIcoN{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: calc(.7rem + .8vw);
+    transform: translateY(-.4rem);
+    anchor-name: --icon;
+}
+
+#cartCount{
+    position: absolute;
+    position-anchor: --icon;
+    top: anchor(top);
+    right: anchor(right);
+    color: black;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 0 .2rem;
+    font-weight: bolder;
+    background-color: aqua;
+    color: black;
+    font-family: cursive;
+}
+.popping{
+   margin: auto;
+   inset: 0;
+   width: clamp(200px, 17rem, 35rem);
+   border: none;
+   aspect-ratio: 3/4;
+   text-align: center;
+   border-radius: 1.5rem;
+   background: radial-gradient(circle at 50% 50%, aqua, black,black);
+   color: white;
+   font-family: cursive;
+   box-shadow: 0 0 .9rem aqua;
+   padding: 24px;
+   transition: opacity .5s ease,  transf
+   .5s ease, display .4s allow-discrete;
+   transform: scale(.95);
+    &:popover-open{
+        opacity: 1;
+        transform: scale(1);
+
+        @starting-style{
+            opacity: 0;
+            transform: scale(.95);
+        }
+    }
+    font-size: calc(.4rem + .4vw);
+}
+.checkBtn{
+    padding: .5rem 0;
+    width: 7rem;
+    margin: 1rem auto;
+    background:conic-gradient(from 90deg at 100% 0%,grey,grey,grey,aqua,black,grey,black,black,aqua,black);
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 .6rem aqua;
+    border-radius: 1.2rem;
+    margin-top: 1rem;
+    font-family: cursive;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+.checkBtn:active{
+    scale: .8;
+}
+.search{
+    position: relative;
+    backdrop-filter: blur(12px);
+    width: calc(12rem + 7vw);
+}
+.search input[type="search"]{
+    width: 100%;
+    height: calc(1.2vh + 1.1rem);
+    border-radius: 3rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 0 0 0 .5rem;
+    anchor-name: --search;
+    transition: all .2s ease;
+}
+.search input:focus{
+    box-shadow: 0 0 .7rem aqua;
+    outline: none;
+}
+.search i{
+    position: absolute;
+    position-anchor: --search;
+    top: anchor(top);
+    right: anchor(right);
+    
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+.navbar li{
+    margin: 0 .9rem;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: calc(.4rem + .8vw);
+    font-family: cursive;
+}
+.navbar a::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    border-bottom: 2px solid aqua;
+    transition: all .4s ease-in-out;
+}
+.navbar a:hover::after{
+    width: 100%;
+    left: 0;
+}
+.story{
+    margin: 9rem 0 10rem;
+    color: white;
+    font-size: clamp(4px, 2.3vw, 2rem);
+}
+.story h2{
+    margin: 3rem 0;
+    background: linear-gradient(135deg, black, aqua, grey,black);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-family: monospace;
+}
+.story h3{
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, black, aqua, white,white,white,white, grey,black,white,white,white);
+    background-clip: text;
+    color: transparent;
+    font-family: monospace;
+}
+.story p{
+    font-family: cursive;
+    background: linear-gradient(145deg,grey,white,grey,white,grey,white,white,grey,white,white,aqua,aqua,aqua);
+    background-clip: text;
+    color: transparent;
+}
+.story>p{
+    background: linear-gradient(145deg,grey,white,aqua,aqua,grey,aqua,aqua,white,aqua,aqua,grey,white,white,grey,aqua,white,white,aqua,aqua,aqua,aqua,aqua);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+.story> button{
+    cursor: pointer;
+    padding: .5rem 3rem;
+    background:conic-gradient(from 90deg at 100% 0%,grey,grey,grey,aqua,black,grey,black,black,aqua,black);
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 .4rem aqua;
+    border-radius: 1.2rem;
+    margin-top: 1rem;
+    font-family: cursive;
+    transition: all .3s ease;
+}
+.story> button:active{
+    scale: .8;
+}
+:is(.my-pain, .did, .promise){
+    line-height: 1.7;
+}
+.my-pain img{
+    width: calc(28vw + 20rem);
+    display: block;
+    margin: 3rem auto;
+    border-radius: .8rem;
+}
+.list p{
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    line-height: 1.5;
+    background: linear-gradient(145deg,grey,white,aqua,aqua,grey,aqua,aqua,white,aqua,aqua,grey,white,white,grey,aqua,white,white,aqua,aqua,aqua,aqua,aqua,aqua,aqua);
+    background-clip: text;
+    color: transparent;
+}
+
+.list p::marker{
+    color: aqua;
+}
+.did img{
+    width: calc(20vw + 20rem);
+    height: calc(35vh + 30rem);
+    display: block;
+    margin: 3rem auto;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 .8rem aqua;
+}
+.test p{
+    display: list-item;
+    list-style: " ✔ ";
+    list-style-position: inside;
+    line-height: 1.5;
+}
+.test p::marker{
+    color: aqua;
+}
+.anchor{
+    text-decoration: none;
+    color: white;
+    width: calc(.9rem + .5vw);
+}
+
+mark{
+    background-color: aqua;
+}
+
+
+footer{
+    font-size: clamp(8px, 1.1vw, 1.1rem);
+    background: linear-gradient(145deg,grey,white,grey,white,grey,white,white,grey,white,white);
+    background-clip: text;
+    color: transparent;
+    margin: 13rem 0 0;
+    box-sizing: border-box;
+    line-height: 2.5;
+    font-family: monospace;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0 1rem;
+}
+.footer p{
+    font-family: cursive;
+}
+.input input{
+    height: calc(1.2vh + 1.1rem);
+    border-radius: 1.2rem;
+    border: none;
+    transition: all .3s ease;
+}
+.input input:focus{
+    box-shadow: 0 0 .4rem aqua;
+    outline: none;
+}
+.input button{
+    cursor: pointer;
+    padding: .3rem .4rem;
+    background:conic-gradient(from 90deg at 100% 0%,grey,grey,grey,aqua,black,grey,black,black,aqua,black);
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 .4rem aqua;
+    border-radius: 1.2rem;
+    transition: all .3s ease;
+}
+.input button:active{
+    scale: .8;
+}
+.explore p{
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.explore p::marker{
+    color: aqua;
+}
+.deck span{
+    color: blue;
+}
+.footer h3{
+    background: linear-gradient(100deg,white,white, aqua, black, grey,grey, white,white);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 1.2rem aqua;
+}
+.allFooter>p{
+    text-align: center;
+    margin: 3rem 0 0;
+    line-height: .9;
+    font-size: clamp(6px, 1.1vw, 1.1rem);
+    font-weight: bolder;
+}
+.allFooter img{
+    width: calc(2.5rem + 2.3vw);
+    margin-top: -3rem;
+}
+hr{
+    background-color: aqua;
+    height: 1px;
+}
+
+
+@media(max-width:1246px){
+    #cartIcoN{
+        transform: translateY(-.2rem) !important;
+    }
+}
+
+@media(max-width:1199px){
+    .input{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100% !important;
+        gap: .4rem 0;
+    }
+}
+@media(max-width:400px){
+    .logo-header{
+        grid-area: logo !important;
+    }
+    .search{
+        grid-area: search;
+        width: 90% !important;
+    }
+    .navbar{
+        grid-area: nav !important;
+    }
+    .header>i{
+        grid-area: cart !important;
+    }
+    .header{
+        display: grid !important;
+        grid-template-columns: repeat(3,1fr) !important;
+        grid-template-rows: repeat(2,1fr) !important;
+        grid-template-areas: "logo nav cart" "search search search" !important;
+        gap: .5rem 1.3rem;
+        place-items: center;
+
+    }
+    .hero{
+        transform: translateY(3rem);
+    }
+    .hero-writeUp{
+        margin: -6rem 0 !important;
+    }
+}
+@media(max-width:600px){
+    .footer{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .input{
+        display: flex !important;
+        margin: 0 .2rem;
+    }
+    .input button{
+        padding: 0 1.5rem !important;
+        font-size: 7px !important;
+    }
+    .my-pain img, .did img{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: clamp(15rem, calc(15vw + 15rem), 30rem) !important;
+    }
+    .did img{
+        height: calc(25vh + 15rem);
+    }
+    .my-pain>p{
+        text-align: center;
+    }
+}
+@media(max-width:536px){
+    #cartIcoN{
+        transform: translateY(-.1rem) !important;
+    }
+}
+@media(max-width:480px){
+    .input{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        gap: .4rem 0 !important;
+    }
+    .input button{
+        padding: .4rem 0 !important;
+    }
+}
+@media(max-width:377px){
+    .story>p{
+        font-size: clamp(10px, 1.1rem, 1.5rem) !important;
+    }
+    .story>button{
+        padding: .3rem 1.5rem !important;
+        font-size: .5rem !important;
+    }
+}
+@media(max-width:367px){
+    .footer{
+        grid-template-columns: 1fr !important;
+        gap: 1rem 0 !important;
+    }
+}
+@media(max-width:415px){
+    .my-pain img, .did img{
+        width: 15rem !important;
+    }
+    .did img{
+        height: calc(20vh + 12rem) !important;
+    }
+}
+@media(max-width:315px){
+    #cartIcoN{
+        transform: translateY(0) !important;
+    }
+}
+@media(max-width:306px){
+    .did img, .my-pain img{
+        width: 13rem !important;
+        transform: translateX(-1rem) !important;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="logo-header">
+                <img src="/IMG_E4385 (2).JPG" alt="">
+            </div>
+            <div class="search">
+                <input type="search" name="" id="search" placeholder="Search...">
+                <i>🔍</i>
+            </div>
+            <nav>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="home.html">Home</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <i>🛒</i>
+        </div>
+        <article>
+            <div class="story">
+                <h2 id="content">WE DIDN'T START IN A STUDIO. STARTED AT THE DOCK</h2>
+                <div class="my-pain" id="content">
+                    <p>I grew up watching divers and offshore guys for Lagos, Warri, and PH. Men wey dey enter cold atlantic by 4AM with clothes wey no really make sense at all - thing cotton wey dey soak in 2mins, pockets wey no fit hold spanner, no light for night deck. Seeing thiings like this con make me dey sad bc e just be like say nobody really send them bc nobody dey make clothes wey go fit handle their job and clothes wey dem dey produce na fashion for runway, nobody dey make armor for rig</p>
+                    <img src="/e-commerce Pic/started.PNG" alt="">
+                </div>
+                <div class="did">
+                    <h3 id="content">What We did:</h3>
+                    <p id="content">Sowe do the work. We sit down with real marine workers. We ask about their pains and their their displeasures. After d set and done we con dey work on the fabric best suited for their work and we begin test the fabric for 3months for salt water, not for AC office. We add:</p> <br>
+                    <div class="list" id="content">
+                        <p>6 reinforced pockets wey go zip and lock your toolz</p>
+                        <p>Fabric wey resist salt and still breathe for 12hrs shift</p>
+                        <p>Knee and elbow wey no dey tear</p>
+                        <p>That signature ocean glow - e be style, but serves more as safety too. So your crew fit see u for night deck.</p>
+                    </div>
+                    <img src="/e-commerce Pic/advance.PNG" alt="">
+                </div>
+                <div class="promise">
+                    <h3 id="content">Our Promise:</h3>
+                    <p id="content">Every OceanVibe TechWear Utility na second skin, no be fashion. We test am for:</p>
+                    <div class="test" id="content">
+                        <p>24hr salt-water resistance</p>
+                        <p>Breathablity for 12hrs shift</p>
+                        <p>Secure pockets for real tools</p>
+                    </div>
+                    <p id="content">If e no survive the rig, we no go sell am</p>
+                </div>
+                <h2 id="content">FROM THE DEEP FOR THE DEEP.</h2>
+                <p id="content">Welcome to the crew</p>
+                <button><a href="shop.html#marine" class="anchor">Shop Marine Collection ➡</a></button>
+            </div>
+        </article>
+
+
+
+
+
+
+
+
+        <footer class="allFooter">
+        <div class="footer">
+            <div class="brand">
+                <h3>BRAND:</h3>
+                <h4>FROM THE DEEP, FOR THE DEEP.</h4>
+                <p>TechWear built for divers, rig workers, and marine crews wey dey face salt, cold and pressure everyday. Not fashion - na armor</p>
+            </div>
+            <div class="crew">
+                <h3>JOINT THE CREW:</h3>
+                <p>No be customers we dey find. Na crew. Get early drops, sea tests, and offshore discounts.</p>
+                <div class="input">
+                    <input type="text" name="" id="" placeholder="Type ur Email">
+                    <button type="submit">JOIN CREW</button>
+                </div>
+                PS: <i>We no dey spam. Only real updates when new TechWear drop</i>
+            </div>
+            <div class="explore">
+                <h3>SHOP & EXPLORE:</h3>
+                <p>Marine Collection</p>
+                <p>New Drops</p>
+                <p>Our Story</p>
+                <p>Size Guide for 12hr Shifts</p>
+            </div>
+            <div class="deck">
+                <h3>CONTACT DECK:</h3>
+                <p><span>📍</span>&nbsp; &nbsp;Lagos/ PH /Warri - Offshore Delivery available</p>
+                <p><span>&#128241;</span>&nbsp;Whatsapp: +2348100219660</p>
+                <p><span>&#128231;</span>&nbsp; &nbsp;<a href="">crew@oceanvibe.ng</a></p>
+                <p><span>&#128336;</span>&nbsp; &nbsp;Support: Mon - Sat, 9AM - 6PM WAT</p>
+            </div>
+        </div><br><br>
+        <hr>
+        <p>&copy; 2026 OceanVibe TechWear. Built for the Rig, the Dive, the Deep Sea.</p>
+        <p><img src="/e-commerce Pic/socials.PNG" alt=""></p>
+    </footer>
+    </div>
+
+
+<script>
+    let search= document.getElementById("search");
+    let allContent=document.querySelectorAll("#content");
+    let gather=[];
+    allContent.forEach(el=>gather.push(el.textContent))
+    search.addEventListener("input", (e)=>{
+        let use=e.target.value;
+        if(!use){
+            allContent.forEach((a,b)=>{
+                a.innerHtml=gather[b];
+            })
+        }
+        let reggy=new RegExp(use,"gi");
+        allContent.forEach((a,b)=>{
+            let newHtml=gather[b].replace(reggy, "<mark>$&</mark>");
+            a.innerHTML=newHtml
+        })
+    });
+    
+</script>
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OceanVibe</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <div class="shop-container">
+        <div class="header">
+            <div class="logo-header">
+                <img src="/IMG_E4385 (2).JPG" alt="">
+            </div>
+            <div class="search">
+                <input type="search" name="" id="search" placeholder="Search...">
+                <i>🔍</i>
+            </div>
+            <nav>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="home.html">Home</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="cart">
+                <button popovertarget="cartPopover" id="cartIcoN" class="icon">🛒</button>
+                <span id="cartCount" class="count"></span>
+            </div>
+            <div id="cartPopover" popover="" class="popping">
+                <h3>Your Picked Items</h3>
+                <div id="cartItems"></div>
+                <p id="msg">No items added so far</p>
+                <p><b>
+                    Total: <span id="cartTotal">0</span>
+                </b></p>
+                <button onclick="document.location='check.html'" class="checkBtn">CheckOut</button>
+            </div>
+        </div>
+        <div class="card-container">
+            <h2 class="shop-title">SHOP THE CREW - FROM THE DEEP</h2>
+            <div class="products">
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/jacket.PNG" alt="">
+                    <h4>Utility Jacket</h4>
+                    <p class="amount">45000</p>
+                    <button onclick="addCart('utility Jacket', '45000')" id="add">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/utility2.PNG" alt="">
+                    <h4>Vest - Glow Zippers</h4>
+                    <p class="amount">45000</p>
+                    <button onclick="addCart('Vest - Glow Zipper', '45000')" id="addUp">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/poloGlow (2).PNG" alt="">
+                    <h4>Oversized Tee</h4>
+                    <p class="amount">20000</p>
+                    <button onclick="addCart('Oversized Tee', '20000')" id="addUp">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/glowBag (2).PNG" alt="">
+                    <h4>Abyss Tech Pack</h4>
+                    <p class="amount">39000</p>
+                    <button onclick="addCart('Abyss Tech Pack', '39000')" id="addUp">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/eyeglass.PNG" alt="">
+                    <h4>Neon Shade</h4>
+                    <p class="amount">23000</p>
+                    <button onclick="addCart('Neon Shade', '23000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/glowShot (2).PNG" alt="">
+                    <h4>Tactical Cargo Short</h4>
+                    <p class="amount">28000</p>
+                    <button onclick="addCart('Tactical Cargo Pant', '28000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/cap.PNG" alt="">
+                    <h4>Cap Tech</h4>
+                    <p class="amount">15000</p>
+                    <button onclick="addCart('Cap Tech', '15000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/sneakers.PNG" alt="">
+                    <h4>Glow Sole Sneakers</h4>
+                    <p class="amount">40000</p>
+                    <button onclick="addCart('Glow Sole Sneakers', '40000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/hoodie.PNG" alt="">
+                    <h4>Deep Hoodie - Black</h4>
+                    <p class="amount">40000</p>
+                    <button onclick="addCart('Deep Hoodie - Black','40000')">Add to Cart</button>
+                </div>
+                <div class="card"  id="goods">
+                    <img src="/e-commerce Pic/deckBoot.PNG" alt="">
+                    <h4>Deck Boot</h4>
+                    <p class="amount">44000</p>
+                    <button onclick="addCart('Deck Boot','44000')">Add to Cart</button>
+                </div>
+                <div class="card"  id="goods">
+                    <img src="/e-commerce Pic/deepDive.PNG" alt="">
+                    <h4>Tactical Base Layer - Deep Dive</h4>
+                    <p class="amount">40000</p>
+                    <button onclick="addCart('Deep Dive','40000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/offshore1.PNG" alt="">
+                    <h4>Offshore Hoodie 2.0</h4>
+                    <p class="amount">45000</p>
+                    <button onclick="addCart('Offshore Hoodie 2.0','45000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/offshore2.PNG" alt="">
+                    <h4>Offshore Hoodie</h4>
+                    <p class="amount">43000</p>
+                    <button onclick="addCart('Offshore Hoodie','43000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/cargopant.PNG" alt="">
+                    <h4>Cargo Pant</h4>
+                    <p class="amount">35000</p>
+                    <button onclick="addCart('Cargo Pant','35000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/kitup (2).PNG" alt="">
+                    <h4>Utility Harness</h4>
+                    <p class="amount">47000</p>
+                    <button onclick="addCart('Utility Harness','47000')">Add to Cart</button>
+                </div>
+                <div class="card" id="goods">
+                    <img src="/e-commerce Pic/utility.PNG" alt="">
+                    <h4>Uitility Vest 2.0</h4>
+                    <p class="amount">50000</p>
+                    <button onclick="addCart('Utility Vest','50000')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <h3 class="m3" id="marine">MARINE WEARS</h3>
+        <div class="marine">
+            <div class="card"  id="goods">
+                <img src="/e-commerce Pic/assassin (2).PNG" alt="">
+                <h4>Balaclava Visor</h4>
+                <p class="amount">48000</p>
+                <button onclick="addCart('Balaclava Visor', '48000')">Add to Cart</button>
+            </div>
+            <div class="card"  id="goods">
+                <img src="/e-commerce Pic/glowMask (2).PNG" alt="">
+                <h4>Abyss Mask</h4>
+                <p class="amount">35000</p>
+                <button onclick="addCart('Abyss Mask', '35000')">Add to Cart</button>
+            </div>
+            <div class="card"  id="goods">
+                <img src="/e-commerce Pic/cargopant.PNG" alt="">
+                <h4>Cargo Pant</h4>
+                <p class="amount">35000</p>
+                <button onclick="addCart('Cargo Pant', '35000')">Add to Cart</button>
+            </div>
+            <div class="card"  id="goods">
+                <img src="/e-commerce Pic/swimBoot.PNG" alt="">
+                <h4>DIVE BOOTS + NEOPRENE SOCKS</h4>
+                <p class="amount">50000</p>
+                <button onclick="addCart('Dive Boots + Neoprine Socks', '50000')">Add to Cart</button>
+            </div>
+            <div class="card"  id="goods">
+                <img src="/e-commerce Pic/swimSuit.PNG" alt="">
+                <h4>OCEAN WETSUIT</h4>
+                <p class="amount">50000</p>
+                <button onclick="addCart('Ocean Wetsuit', '50000')">Add to Cart</button>
+            </div>
+            <div class="card"  id="goods">
+                <img src="/e-commerce Pic/swimTrouser.PNG" alt="">
+                <h4>NEOPRENE DIVE PANTS</h4>
+                <p class="amount">25000</p>
+                <button onclick="addCart('Neoprine Dive Pants', '25000')">Add to Cart</button>
+            </div>
+            <div class="card" id="goods">
+                <img src="/e-commerce Pic/cardigan.PNG" alt="">
+                <h4>HOODIE DIVE JACKET</h4>
+                <p class="amount">30000</p>
+                <button onclick="addCart('Hoodie Dive Jacket', '30000')">Add to Cart</button>
+            </div>
+            <div class="card" id="goods">
+                <img src="/e-commerce Pic/coverCap.PNG" alt="">
+                <h4>DIVE HOOD + GLOVES</h4>
+                <p class="amount">35000</p>
+                <button onclick="addCart('Dive Hood + Gloves', '35000')">Add to Cart</button>
+            </div>
+            <div class="card" id="goods">
+                <img src="/e-commerce Pic/collarLight.PNG" alt="">
+                <h4>THICK DIVER HOODIE - GLOW COLLAR</h4>
+                <p class="amount">50000</p>
+                <button onclick="addCart('Thick Diver Hoodie', '50000')">Add to Cart</button>
+            </div>
+            <div class="card" id="goods">
+                <img src="/e-commerce Pic/glassCollar.PNG" alt="">
+                <h4>TECH DIVE GOOGLE + GLOW HEADSET</h4>
+                <p class="amount">50000</p>
+                <button onclick="addCart('Tech Dive Goggle + Glow Headset', '50000')">Add to Cart</button>
+            </div>
+            <div class="card" id="goods">
+                <img src="/e-commerce Pic/fullKit.PNG" alt="">
+                <h4>TECHWEAR OVERALL</h4>
+                <p class="amount">80000</p>
+                <button onclick="addCart('Techwear Overall', '80000')">Add to Cart</button>
+            </div>
+            <div class="card" id="goods">
+                <img src="/e-commerce Pic/halfKit.PNG" alt="">
+                <h4>TECH TOP JACKET</h4>
+                <p class="amount">50000</p>
+                <button onclick="addCart('Tech Top Jacket', '50000')">Add to Cart</button>
+            </div>
+        </div>
+
+        <footer class="allFooter">
+        <div class="footer">
+            <div class="brand">
+                <h3>BRAND:</h3>
+                <h4>FROM THE DEEP, FOR THE DEEP.</h4>
+                <p>TechWear built for divers, rig workers, and marine crews wey dey face salt, cold and pressure everyday. Not fashion - na armor</p>
+            </div>
+            <div class="crew">
+                <h3>JOINT THE CREW:</h3>
+                <p>No be customers we dey find. Na crew. Get early drops, sea tests, and offshore discounts.</p>
+                <div class="input">
+                    <input type="text" name="" id="" placeholder="Type ur Email">
+                    <button type="submit">JOIN CREW</button>
+                </div>
+                PS: <i>We no dey spam. Only real updates when new TechWear drop</i>
+            </div>
+            <div class="explore">
+                <h3>SHOP & EXPLORE:</h3>
+                <p>Marine Collection</p>
+                <p>New Drops</p>
+                <p>Our Story</p>
+                <p>Size Guide for 12hr Shifts</p>
+            </div>
+            <div class="deck">
+                <h3>CONTACT DECK:</h3>
+                <p><span>📍</span>&nbsp; &nbsp;Lagos/ PH /Warri - &nbsp; &nbsp;&nbsp; &nbsp;Offshore Delivery available</p>
+                <p><span>&#128241;</span>&nbsp;Whatsapp: +2348100219660</p>
+                <p><span>&#128231;</span>&nbsp; &nbsp;<a href="">crew@oceanvibe.ng</a></p>
+                <p><span>&#128336;</span>&nbsp; &nbsp;Support: Mon - Sat, 9AM - 6PM WAT</p>
+            </div>
+        </div><br><br>
+        <hr>
+        <p>&copy; 2026 OceanVibe TechWear. Built for the Rig, the Dive, the Deep Sea.</p>
+        <p><img src="/e-commerce Pic/socials.PNG" alt=""></p>
+    </footer>
+    </div>
+<script>
+    let amount=document.querySelectorAll(".amount");
+    amount.forEach(el=>{
+        let naira=el.textContent.replace(/[^0-9]/g," ");
+        let change=el.textContent=Number(naira).toLocaleString("en-NG",{
+            style:"currency",
+            currency:"NGN"
+        })
+    });
+    let search= document.getElementById("search");
+    let goods= document.querySelectorAll("#goods");
+    search.addEventListener("input", ()=>{
+        let check=search.value.toLowerCase();
+        goods.forEach(el=>{
+            if(el.textContent.toLowerCase().includes(check)){
+                el.style.display="";
+            }else{
+                el.style.display="none";
+            }
+        })
+    })
+</script>
+<script src="cart.js"></script>
+</body>
+</html>
