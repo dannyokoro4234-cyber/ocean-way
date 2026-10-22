@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <div class="hero-container">
+        <div class="logo-header">
+            <img src="/IMG_E4385 (2).JPG" alt="">
+        </div>
+        <form class="box box1 logUP" id="box">
+            <div class="shift">
+                <div class="ocean">
+                    <input type="email" name="" id="email" placeholder="Enter your email" required class="hope"><br>
+                </div><br>
+                <div class="ocean">
+                    <input type="password" name="" placeholder="enter Password" required class="hope soon password ">
+                </div>
+                <span class="eye togglePassword">👁</span>
+                <br>
+                <div class="login">
+                    <button type="submit" class="btn tn">Login</button>
+                    <div class="login2">
+                        <button type="submit" class="btn bt">Login</button>
+                    </div>
+                </div><br><br>
+                <p>Don't have an account? <span class="link" id="signUp" onclick="showSign()">Sign Up</span></p>
+            </div>
+        </form>
+
+        <form class="box signUP" id="signBox" style="display: none;">
+            <div class="shift2">
+                <div class="ocean">
+                    <input type="email" name="" id="email2" placeholder="Enter your email" required class="hope"><br>
+                </div><br>
+                <div class="ocean oc2">
+                    <input type="password" name="" placeholder="enter Password" required class="hope soon password " id="pw">
+                </div>
+                <span class="eye eye1 togglePassword">👁</span>
+                <br>
+                <div class="ocean oc3">
+                    <input type="password" name="" id="conFirmPassword" placeholder="Confirm Password" required class="hope soon new">
+                </div>
+                <span class="eye eye2" id="confirmToggle">👁</span>
+                <br>
+                <label for="" id="passkey"></label><br>
+                <div class="login">
+                    <button type="submit" class="btn tn">Sign Up</button>
+                    <div class="login2">
+                        <button type="submit" class="btn bt">Sign Up</button>
+                    </div>
+                </div><br><br>
+                <p>Already have an account? <span class="link" id="logUp" onclick="showLogin()">Login</span></p>
+            </div>
+        </form><br><br>
+        <p id="login"></p>
+    </div>
+    <div class="loader">
+            <h2>oceanVIBE</h2>
+            <span></span><span></span><span></span>
+    </div>
+<script src="login.js"></script>
+</body>
+</html>
