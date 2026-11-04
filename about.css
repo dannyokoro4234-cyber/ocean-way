@@ -140,7 +140,7 @@ body{
     text-decoration: none;
     position: relative;
     font-size: calc(.4rem + .8vw);
-    font-family: cursive;
+    font-family: monospace;
 }
 .navbar a::after{
     content: " ";
@@ -158,34 +158,32 @@ body{
 .story{
     margin: 9rem 0 10rem;
     color: white;
-    font-size: clamp(4px, 2.3vw, 2rem);
+    font-size: clamp(4px, 1.8vw, 2rem);
 }
 .story h2{
     margin: 3rem 0;
-    background: linear-gradient(135deg, black, aqua, grey,black);
-    background-clip: text;
-    color: transparent;
+    color: white;
     text-align: center;
+    text-shadow: 0 0 .9rem aqua;
     font-family: monospace;
+    letter-spacing: 3px;
 }
 .story h3{
     margin-bottom: 1rem;
     background: linear-gradient(135deg, black, aqua, white,white,white,white, grey,black,white,white,white);
     background-clip: text;
     color: transparent;
-    font-family: monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.5px;
 }
 .story p{
-    font-family: cursive;
-    background: linear-gradient(145deg,grey,white,grey,white,grey,white,white,grey,white,white,aqua,aqua,aqua);
-    background-clip: text;
-    color: transparent;
+    font-family: sans-serif;
+    color: white;
 }
 .story>p{
-    background: linear-gradient(145deg,grey,white,aqua,aqua,grey,aqua,aqua,white,aqua,aqua,grey,white,white,grey,aqua,white,white,aqua,aqua,aqua,aqua,aqua);
-    background-clip: text;
-    color: transparent;
+    color: white;
     font-weight: bold;
+    font-family: 'Times New Roman';
 }
 .story> button{
     cursor: pointer;
@@ -203,6 +201,7 @@ body{
 .story> button:active{
     scale: .8;
 }
+
 :is(.my-pain, .did, .promise){
     line-height: 1.7;
 }
@@ -212,18 +211,19 @@ body{
     margin: 3rem auto;
     border-radius: .8rem;
 }
+.list{
+    margin-top: -0.5rem;
+}
 .list p{
     display: list-item;
     list-style-type: disc;
     list-style-position: inside;
     line-height: 1.5;
-    background: linear-gradient(145deg,grey,white,aqua,aqua,grey,aqua,aqua,white,aqua,aqua,grey,white,white,grey,aqua,white,white,aqua,aqua,aqua,aqua,aqua,aqua,aqua);
-    background-clip: text;
-    color: transparent;
 }
 
 .list p::marker{
     color: aqua;
+    font-weight: bolder;
 }
 .did img{
     width: calc(20vw + 20rem);
@@ -232,6 +232,9 @@ body{
     margin: 3rem auto;
     border-radius: 1.2rem;
     box-shadow: 0 0 .8rem aqua;
+}
+.did p{
+    color: white;
 }
 .test p{
     display: list-item;
@@ -255,9 +258,7 @@ mark{
 
 footer{
     font-size: clamp(8px, 1.1vw, 1.1rem);
-    background: linear-gradient(145deg,grey,white,grey,white,grey,white,white,grey,white,white);
-    background-clip: text;
-    color: transparent;
+    color: white;
     margin: 13rem 0 0;
     box-sizing: border-box;
     line-height: 2.5;
@@ -276,6 +277,8 @@ footer{
     border-radius: 1.2rem;
     border: none;
     transition: all .3s ease;
+    padding: 0 0 0 .3rem;
+    
 }
 .input input:focus{
     box-shadow: 0 0 .4rem aqua;
@@ -307,9 +310,7 @@ footer{
     color: blue;
 }
 .footer h3{
-    background: linear-gradient(100deg,white,white, aqua, black, grey,grey, white,white);
-    background-clip: text;
-    color: transparent;
+    color: white;
     text-shadow: 0 0 1.2rem aqua;
 }
 .allFooter>p{
@@ -317,6 +318,10 @@ footer{
     margin: 3rem 0 0;
     line-height: .9;
     font-size: clamp(6px, 1.1vw, 1.1rem);
+    font-weight: bolder;
+}
+.allFooter p{
+    font-family: sans-serif;
     font-weight: bolder;
 }
 .allFooter img{
@@ -373,6 +378,27 @@ hr{
         margin: -6rem 0 !important;
     }
 }
+@media(max-width:630px){
+    .navbar a{
+        transition: all .4s ease !important;
+    }
+    .navbar a:active{
+        color: aqua !important;
+    }
+    .navbar a::after{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0%;
+        border-bottom: 2px solid aqua;
+        transition: all .4s ease-in-out;
+    }
+    .navbar a:hover::after{
+        width: 100%;
+        left: 0;
+    }
+}
 @media(max-width:600px){
     .footer{
         grid-template-columns: repeat(2, 1fr) !important;
@@ -394,9 +420,7 @@ hr{
     .did img{
         height: calc(25vh + 15rem);
     }
-    .my-pain>p{
-        text-align: center;
-    }
+    
 }
 @media(max-width:536px){
     #cartIcoN{
@@ -409,9 +433,22 @@ hr{
         grid-template-columns: 1fr !important;
         width: 100% !important;
         gap: .4rem 0 !important;
+        margin: 0 0 .5rem !important;
     }
     .input button{
         padding: .4rem 0 !important;
+    }
+    .count{
+        background-color: transparent !important;
+        color: aqua !important;
+        font-weight: bolder !important;
+        transform: translateY(.1rem) translateX(-.1rem) !important;
+        text-shadow: 0 0 .4rem aqua !important;
+    }
+}
+@media(max-width:400px){
+    .popping{
+        width: 13rem !important;
     }
 }
 @media(max-width:377px){
@@ -421,6 +458,11 @@ hr{
     .story>button{
         padding: .3rem 1.5rem !important;
         font-size: .5rem !important;
+    }
+}
+@media(max-width:469px){
+    .story{
+        font-size: 2vw !important;
     }
 }
 @media(max-width:367px){
@@ -436,15 +478,36 @@ hr{
     .did img{
         height: calc(20vh + 12rem) !important;
     }
+    .my-pain>p{
+        line-height: 2 !important;
+    }
 }
+
 @media(max-width:315px){
     #cartIcoN{
         transform: translateY(0) !important;
     }
 }
+@media(max-width:363px){
+    .my-pain>p{
+        font-size: 8.5px !important;
+    }
+    .list>p{
+        line-height: 1.5 !important;
+    }
+}
 @media(max-width:306px){
     .did img, .my-pain img{
-        width: 13rem !important;
-        transform: translateX(-1rem) !important;
+        width: 100% !important;
+    }
+}
+@media(max-width:470px){
+    .did p, .promise p{
+        letter-spacing: 1.3px !important;
+        font-size: 8.5px !important;
+        font-weight: bolder !important;
+    }
+    .list{
+        margin-top: .5rem !important;
     }
 }

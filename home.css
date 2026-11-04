@@ -41,7 +41,7 @@ body{
 .popping{
    margin: auto;
    inset: 0;
-   width: clamp(200px, 17rem, 35rem);
+   width: clamp(100px, 17rem, 35rem);
    border: none;
    aspect-ratio: 3/4;
    text-align: center;
@@ -118,7 +118,7 @@ body{
     color: white;
     text-decoration: none;
     position: relative;
-    font-family: cursive;
+    font-family: monospace;
     font-size: calc(.4rem + .8vw);
 }
 .navbar a::after{
@@ -142,7 +142,7 @@ body{
 .hero{
     position: relative;
     text-align: center;
-    background: url(/e-commerce\ Pic/hero-image.png);
+    background: url(/image/hero-image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -163,14 +163,14 @@ body{
     text-shadow: .5rem 1rem 1.1rem rgba(10,255,255,.9);
 }
 .hero-writeUp p{
-    background: linear-gradient(270deg,black,grey,black,black,grey);
+    background: linear-gradient(270deg,white,black,white,grey,black,black,grey);
     background-clip: text;
     color: transparent;
     font-weight: 600;
 }
 .hero-writeUp button{
     cursor: pointer;
-    margin: 0 1.5rem;
+    margin: 2rem 1.5rem 0;
     border: none;
     border-radius: 3rem;
     padding: .7rem 2rem;
@@ -395,10 +395,9 @@ body{
     font-size: clamp(12px, 2vw, 3rem);
 }
 .storySec h2{
-    background: linear-gradient(135deg, black, aqua, grey,black);
-    background-clip: text;
-    color: transparent;
+    color: white;
     text-align: center;
+    text-shadow: 0 0 1.1rem aqua;
 }
 .storyVibe{
     display: grid;
@@ -407,10 +406,8 @@ body{
 }
 .storyvibe p{
     line-height: 1.8;
-    font-family: cursive;
-    background: linear-gradient(135deg,white, grey,grey,aqua,aqua);
-    background-clip: text;
-    color: transparent;
+    font-family: sans-serif;
+    color: white;
 }
 .storyVibe img{
     width: calc(26vw + 17rem);
@@ -432,10 +429,11 @@ body{
     transition: scale .6s;
 }
 .badges p{
-    font-family: cursive;
+    font-family: sans-serif;
     display: list-item;
     list-style: disc;
     list-style-position: inside;
+    line-height: 1.2;
 }
 .badges p::marker{
     color: aqua;
@@ -459,13 +457,12 @@ footer{
     grid-template-columns: repeat(4,1fr);
     gap: 0 1rem;
 }
-.footer p{
-    font-family: cursive;
-}
+
 .input input{
     height: calc(1.2vh + 1.1rem);
     border-radius: 1.2rem;
     border: none;
+    padding: 0 0 0 .5rem;
     transition: all .3s ease;
 }
 .input input:focus{
@@ -498,9 +495,7 @@ footer{
     color: blue;
 }
 .footer h3{
-    background: linear-gradient(100deg,white,white, aqua, black, grey,grey, white,white);
-    background-clip: text;
-    color: transparent;
+    color: white;
     text-shadow: 0 0 1.2rem aqua;
 }
 .allFooter>p{
@@ -509,6 +504,10 @@ footer{
     line-height: .9;
     font-size: clamp(6px, 1.1vw, 1.1rem);
     font-weight: bolder;
+}
+.allFooter p{
+    color: white;
+    font-family: sans-serif;
 }
 .allFooter img{
     width: calc(2.5rem + 2.3vw);
@@ -604,6 +603,9 @@ hr{
         grid-template-areas: "style4" "style2" "style3" !important;
         margin-top: 2rem !important;
     }
+    .storyvibe>p{
+        line-height: 2.2 !important;
+    }
 }
 @media(max-width:480px){
     .input{
@@ -611,9 +613,18 @@ hr{
         grid-template-columns: 1fr !important;
         width: 100% !important;
         gap: .4rem 0 !important;
+        margin: 0 0 .5rem !important;
     }
     .input button{
         padding: .4rem 0 !important;
+    }
+    .count{
+        background-color: transparent !important;
+        color: aqua !important;
+        font-weight: bolder !important;
+        transform: translateY(.1rem) translateX(-.1rem) !important;
+
+        text-shadow: 0 0 .4rem aqua !important;
     }
     
 }
@@ -623,17 +634,6 @@ hr{
     }
 }
 @media(max-width:430px){
-    .btn{
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: .5rem 0 !important;
-        width: 100% !important;
-        
-    }
-    .btn button{
-        text-align: center;
-        box-shadow: 0 0 .5rem aqua;
-    }
     .hero-writeUp p{
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
@@ -668,6 +668,22 @@ hr{
     .hero-writeUp{
         margin: -6rem 0 !important;
     }
+    .popping{
+        width: 13rem !important;
+    }
+    .checkBtn{
+        width: 5rem !important;
+        box-sizing: border-box !important;
+        
+    }
+    .badges>p{
+        line-height: 1.5 !important;
+    }
+}
+@media(max-width:370px){
+    .hero button{
+        margin: .7rem 1rem !important;
+    }
 }
 @media(max-width:372px){
     .storyVibe img{
@@ -678,6 +694,22 @@ hr{
     .footer{
         grid-template-columns: 1fr !important;
         gap: 1rem 0 !important;
+    }
+}
+@media(max-width:350px){
+    .btn{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: .5rem 0 !important;
+        width: 100% !important;
+        
+    }
+    .btn button{
+        text-align: center;
+        box-shadow: 0 0 .5rem aqua;
+    }
+    .btn button:first-child{
+        margin-bottom: .5rem !important;
     }
 }
 @media(max-width:315px){
