@@ -134,6 +134,9 @@ body{
     width: 100%;
     left: 0;
 }
+.navbar a:active{
+    color: aqua;
+}
 .hero img{
     width: 100%;
     margin-top: 3rem;
@@ -161,6 +164,7 @@ body{
 }
 .hero-writeUp h1{
     text-shadow: .5rem 1rem 1.1rem rgba(10,255,255,.9);
+    margin-bottom: 1.5rem;
 }
 .hero-writeUp p{
     background: linear-gradient(270deg,white,black,white,grey,black,black,grey);
