@@ -72,11 +72,13 @@ body{
 .box button{
     padding: .3rem 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: .4rem;
+    border-radius: .3rem;
     border: none;
     display: flex;
     justify-content: center;
     font-weight: bolder;
+    background-color: white;
+    color: black;
     font-size: 1.05rem;
 }
 .box label{
@@ -134,8 +136,9 @@ body{
 .eye{
     position: absolute;
     position-anchor: --eye;
-    top: anchor(top);
+    bottom: anchor(bottom);
     right: anchor(right);
+    transform: translateY(-.4rem);
     cursor: pointer;
 }
 .work{
@@ -145,7 +148,7 @@ body{
 .Eye{
     position: absolute;
     position-anchor: --Eye;
-    top: anchor(top);
+    bottom: anchor(bottom);
     right: anchor(right);
     cursor: pointer;
 }
@@ -195,7 +198,7 @@ body{
 .eye2{
     position: absolute;
     position-anchor: --oc3;
-    top: anchor(top);
+    bottom: anchor(bottom);
     right: anchor(right);
 }
 .logUP, .signUP{
@@ -230,12 +233,13 @@ body{
     color: white;
     z-index: 9999;
     display: flex;
+    
    display: none;
 
 }
 .loader h2{
     font-size: 2.3rem;
-    font-family: cursive;
+    font-family: monospace;
     background: linear-gradient(0deg,black,aqua);
     background-clip: text;
     color: transparent;
@@ -244,9 +248,8 @@ body{
     display: inline-block;
     width: 12px;
     height: 12px;
-    background:white;
-    margin: 1.9rem 5px 0;
-    transform: translateY(-100rem);
+    background:aqua;
+    margin: 1.5rem 5px 0;
     border-radius: 50%;
     animation: bounce 1.4s infinite ease-in-out both;
 }

@@ -121,20 +121,23 @@ function setToggle(){
                       const input=password[change];
                       if(input.type==="password"){
                                 input.type="text";
-                                index.textContent="😎";
+                                
                       }else{
                                 input.type="password";
-                                index.textContent="👁";
                       }
+                      index.classList.toggle('fa-eye');
+                      index.classList.toggle('fa-eye-slash')
 
                 })
         })
+        
         let passEye2=document.querySelector("#confirmToggle");
         let password2=document.querySelector("#conFirmPassword");
         passEye2.addEventListener('click',()=>{
                 const change=password2.getAttribute("type")==="password" ?"text" :"password";
                 password2.setAttribute("type",change);
-                passEye2.textContent=change==="password"?"👁" :"😎";
+                passEye2.classList.toggle('fa-eye-slash');
+                passEye2.classList.toggle('fa-eye');
         })
 }
 document.addEventListener('DOMContentLoaded', setToggle);

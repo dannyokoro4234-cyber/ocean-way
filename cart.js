@@ -5,10 +5,12 @@ const total=document.querySelector("#cartTotal");
 const emptyMsg=document.querySelector("#msg");
 const glow=document.querySelector(".popping");
 const check=document.querySelector(".checkBtn");
+const kart=document.querySelector(".cart");
 let cart;
 try{
     cart=JSON.parse(localStorage.getItem("cartIcoN")) || [];
 }catch(err){
+
     cart=[];
     localStorage.removeItem("cartIcoN");
 }
@@ -28,6 +30,14 @@ function renderCart(){
         emptyMsg.style.display="none";
         glow.style.background="black";
         check.style.display="block"; 
+        kart.style.background="linear-gradient(120deg,aqua,black,black)";
+        kart.style.boxShadow="0 0 .4rem aqua";
+        kart.style.borderRadius="1.3rem";
+        kart.style.padding="0 .3rem 0 2rem";
+        kart.style.transition="all ease .5s";
+        kart.style.display="flex";
+        kart.style.alignItems="center";
+        kart.style.justifyContent="center";
     }else{
         emptyMsg.style.display="block";
         glow.style.background="";
@@ -35,6 +45,7 @@ function renderCart(){
         total.textContent=format("0");
         cartList.innerHTML="";
         check.style.display="none";
+
         saveCart();
     }
     cartList.innerHTML="";

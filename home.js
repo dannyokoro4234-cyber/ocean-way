@@ -18,7 +18,7 @@ price.forEach(cost=>{
         currency:"NGN"
     })
 });
-const images=['hoodie.png','jacket.png','deckBoot2.png','collarLight.png','coverCap.png'];
+const images=['images/hoodie.png','images/jacket.png','images/deckBoot2.png','images/collarLight.png','images/coverCap.png'];
 let verify=0;
 let timer;
 function imageChange(){
