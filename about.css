@@ -65,6 +65,7 @@ body{
    font-family: arial;
    box-shadow: 0 0 .9rem aqua;
    padding: 24px;
+   overflow: auto;
    transition: opacity .5s ease,  transf
    .5s ease, display .4s allow-discrete;
    transform: scale(.95);
@@ -123,9 +124,12 @@ body{
     position: absolute;
     position-anchor: --search;
     right: anchor(right);
-    transform: translate(-.2rem, .55rem);
+    transform: translate(-.2rem, .4rem);
     font-size: calc(.5rem + .4vw);
     color: aqua;
+}
+.cart{
+    margin-right: .8rem;
 }
 .navbar ul {
     display: flex;
@@ -248,6 +252,8 @@ body{
     text-decoration: none;
     color: white;
     width: calc(.9rem + .5vw);
+    font-family: sans-serif;
+    text-shadow: 0 0 1.2rem aqua;
 }
 
 mark{

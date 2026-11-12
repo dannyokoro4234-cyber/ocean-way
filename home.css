@@ -53,6 +53,7 @@ body{
    transition: opacity .5s ease,  transf
    .5s ease, display .4s allow-discrete;
    transform: scale(.95);
+   overflow: auto;
     &:popover-open{
         opacity: 1;
         transform: scale(1);
@@ -77,7 +78,9 @@ body{
     color: black;
     font-family: sans-serif;
 }
-
+.cart{
+    margin-right: .8rem;
+}
 .search{
     position: relative;
     backdrop-filter: blur(12px);
@@ -103,7 +106,7 @@ body{
     position: absolute;
     position-anchor: --search;
     right: anchor(right);
-    transform: translate(-.2rem, .55rem);
+    transform: translate(-.2rem, .4rem);
     font-size: calc(.5rem + .4vw);
     color: aqua;
 }
@@ -259,6 +262,7 @@ body{
     position: absolute;
     top: 40%;
     opacity: 0;
+    color: black;
     cursor: pointer;
     transition: all .6s;
     font-family: cursive;
