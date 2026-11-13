@@ -33,13 +33,14 @@
                 </button>
                 <span id="cartCount" class="count"></span>
             </div>
-            <div id="cartPopover" popover="" class="popping">
-                <h3>Your Picked Items</h3>
-                <div id="cartItems"></div>
-                <p id="msg">No items added so far</p>
-                <p><b>
-                    Total: <span id="cartTotal">0</span>
-                </b></p>
+            <div id="cartPopover" popover="" class="popping" style="height: 55dvh !important; max-height: 55dvh !important; overflow: hidden !important; box-sizing: border-box !important; flex-direction: column;">
+                <h3 style="margin-bottom: 1rem;">Your Picked Items</h3>
+                <div class="cartIt" style="overflow-y: auto; flex: 1; scrollbar-width: none;">
+                    <div id="cartItems"></div>
+                    <p id="msg">No items added so far</p>
+                    <h4 style=" margin-top: .7rem;">Total: <span id="cartTotal">0</span>
+                    </h4>
+                </div>
                 <button onclick="document.location='check.html'" class="checkBtn">CheckOut</button>
             </div>
         </div>

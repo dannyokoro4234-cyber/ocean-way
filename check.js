@@ -19,7 +19,7 @@ function form(amount){
     const address=document.getElementById("address").value.trim();
     const select=document.getElementById("select");
     if(select.value === "Choose Payment Method" || select.selectedIndex === 0){
-        alert('Abeg Add Payment method u Criminal');
+        alert('Pls add a payment method');
         select.style.border="2px solid red";
         select.focus();
         return;

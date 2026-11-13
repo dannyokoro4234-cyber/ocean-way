@@ -41,23 +41,22 @@ body{
    margin: auto;
    inset: 0;
    width: clamp(100px, 17rem, 35rem);
-   border: none;
-   aspect-ratio: 3/4;
+   padding: 1rem;
+   border: none !important;
+   outline: none !important;
    text-align: center;
    border-radius: 1.5rem;
    background: radial-gradient(circle at 50% 50%, aqua, black,black);
    color: white;
    font-family: Arial;
    box-shadow: 0 0 .9rem aqua;
-   padding: 24px;
-   transition: opacity .5s ease,  transf
-   .5s ease, display .4s allow-discrete;
+   transition: opacity .5s ease,transform .5s ease, display .4s allow-discrete;
    transform: scale(.95);
-   overflow: auto;
+   display: none;
     &:popover-open{
         opacity: 1;
         transform: scale(1);
-
+        display: flex;
         @starting-style{
             opacity: 0;
             transform: scale(.95);
@@ -65,6 +64,11 @@ body{
     }
     font-size: calc(.4rem + .4vw);
 }
+.popping::-webkit-scrollbar{
+    width: 0px;
+    display: none;
+}
+
 #cartCount{
     position: absolute;
     position-anchor: --icon;
@@ -262,6 +266,9 @@ body{
     position: absolute;
     top: 40%;
     opacity: 0;
+    background-color: white;
+    border: none;
+    outline: none;
     color: black;
     cursor: pointer;
     transition: all .6s;
@@ -281,6 +288,10 @@ body{
 }
 .hoodie button:active, .eyeglass button:active{
     scale: .8;
+}
+article:has(.product-container) button:hover{
+    outline: none;
+    border: none;
 }
 .checkBtn{
     padding: .5rem 0;
@@ -686,6 +697,9 @@ hr{
     }
     .popping{
         width: 13rem !important;
+    }
+    .popping p{
+        font-size: 7.3px !important;
     }
     .checkBtn{
         width: 5rem !important;

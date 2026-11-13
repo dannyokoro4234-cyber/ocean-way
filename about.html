@@ -31,13 +31,15 @@
                 </button>
                 <span id="cartCount" class="count"></span>
             </div>
-            <div id="cartPopover" popover="" class="popping">
-                <h3>Your Picked Items</h3>
-                <div id="cartItems"></div>
-                <p id="msg">No items added so far</p>
-                <p><b>
+            <div id="cartPopover" popover="" class="popping" style="height: 55dvh !important; max-height: 55dvh !important; overflow: hidden !important; box-sizing: border-box !important; flex-direction: column;">
+                <h3 style="margin-bottom: 1rem;">Your Picked Items</h3>
+                <div class="cartIt" style="overflow-y: auto; flex: 1; scrollbar-width: none;">
+                    <div id="cartItems" style="font-weight: bolder;"></div>
+                    <p id="msg">No items added so far</p>
+                    <h4 style=" margin-top: .7rem;"><b>
                     Total: <span id="cartTotal">0</span>
-                </b></p>
+                    </b></h4>
+                </div>
                 <button onclick="document.location='check.html'" class="checkBtn">CheckOut</button>
             </div>
         </div>
@@ -50,7 +52,7 @@
                 </div>
                 <div class="did">
                     <h3 id="content">What We did:</h3>
-                    <p id="content">Sowe do the work. We sit down with real marine workers. We ask about their pains and their their displeasures. After d set and done we con dey work on the fabric best suited for their work and we begin test the fabric for 3months for salt water, not for AC office. We add:</p> <br>
+                    <p id="content">So we do the work. We sit down with real marine workers. We ask about their pains and their their displeasures. After d set and done we con dey work on the fabric best suited for their work and we begin test the fabric for 3months for salt water, not for AC office. We add:</p> <br>
                     <div class="list" id="content">
                         <p>6 reinforced pockets wey go zip and lock your toolz</p>
                         <p>Fabric wey resist salt and still breathe for 12hrs shift</p>
